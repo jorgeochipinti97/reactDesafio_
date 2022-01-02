@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+creada con el npx comando create-react-app e inicializada con el npm start, se aloja en el puerto http://localhost:3000/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Desafio:
 
-## Available Scripts
+construye una lista que contenga tres intervalos de horarios de 30 m que empiece a las 8 am y termine a las 8:30am,  disponibilidad de 1 motociclistas cada 1 minutos, cada vez que se hace click se  inica un contador y se da el recuros de motociclista y se marca la caja en verde, si no hay motociclistas disponibles se marca en rojo y no debe dejar tomar el horarios
+_________________________________________________________________________
 
-In the project directory, you can run:
 
-### `npm start`
+Hola! Yo soy Jorge Ochipinti y realicé esté desafío dictado por Nicolas Schurman, youtuber, ingeniero de software, quien comentó que realizó este para ingresar a trabajar en nueva zelanda.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El desafio consta en construir una lista que contenga dos intervalos de horarios de 30 m que empiece a las 8 am y termine a las 8:30am, disponibilidad de 1 motociclistas cada 1 minutos, cada vez que se hace click se inica un contador y se da el recuros de motociclista y se marca la caja en verde, si no hay motociclistas disponibles se marca en rojo y no debe dejar tomar el horarios
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+utilizamos useState para crear las variales y sus futuros updates, lo más complejo de todo el desafío fue calcular la fecha futura para realizar el temporizador.
 
-### `npm test`
+para conseguirlo cree la constante getTime a la cual se le pasaron 3 argumentos, esto porque los set del useState cambian de acuerdo a la logica aplicada de acuerdo al funcionamiento. Se calcula una fecha futura mediante los metodos del Date la cual solo va a ser futura por un minuto, luego en un setInterval que se le otorgo la const idInterval, y su periodo se repite cada 500 milisegundos, se realiza la resta de la fecha futura con la creada en el momento en que se lanza la función, pero todo esto esta en milisegundos, asi que se calculan los minutos y los segundos por separado para obtener el así el tiempo restante, en el mismo set Inverval una vez que el tiempo restante es igual 0 menor a cero, se detiene mediante el clearInterval que se encuentra dentro de un setTiemout para darle el tiempito que necesita para finalizar todas las funciones antes de que muera.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+por otra parte se creo la constante HandleClick a la cual se le pasaron cuatro argumentos, en ella tenemos un condicional, este condicional sirve para actualizar el numero de motociclistas disponibles, dehabilitar el boton, poner en true el servicio, todo esto mediante sus correspondientes set del useState, excepto la del button que se la pasamos en las props, y por ulimo lanza la funcion gettime con los argumentos pasados en las props.
 
-### `npm run build`
+Mediante el uso de useEffet le otorgamos la logica necesaria para que cuando se clickee el boton cambien los colores y se habilite o deshabilite de acuerdo al numero de motociclistas disponibles y cambie los colores del fondo de acuerdo a si tiene el servicio o no
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+para los estilos use Styled components, para mostrar y ocultar el contador uses spread operator y eso es basicamente todo, muchas gracias
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+mas allá de todo, no pasé el desafio porque era hacerlo en una hora y tarde 2 horas ajajjajajaja
