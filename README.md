@@ -2,13 +2,11 @@ creada con el npx comando create-react-app e inicializada con el npm start, se a
 
 Desafio:
 
-construye una lista que contenga tres intervalos de horarios de 30 m que empiece a las 8 am y termine a las 8:30am,  disponibilidad de 1 motociclistas cada 1 minutos, cada vez que se hace click se  inica un contador y se da el recuros de motociclista y se marca la caja en verde, si no hay motociclistas disponibles se marca en rojo y no debe dejar tomar el horarios
+construye una lista que contenga tres intervalos de horarios de 30 m que empiece a las 8 am y termine a las 8:30am,  disponibilidad de 1 motociclistas cada 1 minutos contando con un total de 2 motociclistas, cada vez que se hace click se  inica un contador y se da el recuros de motociclista y se marca la caja en verde, si no hay motociclistas disponibles se marca en rojo y no debe dejar tomar el horarios
 _________________________________________________________________________
 
 
 Hola! Yo soy Jorge Ochipinti y realicé esté desafío dictado por Nicolas Schurman, youtuber, ingeniero de software, quien comentó que realizó este para ingresar a trabajar en nueva zelanda.
-
-El desafio consta en construir una lista que contenga dos intervalos de horarios de 30 m que empiece a las 8 am y termine a las 8:30am, disponibilidad de 1 motociclistas cada 1 minutos, cada vez que se hace click se inica un contador y se da el recuros de motociclista y se marca la caja en verde, si no hay motociclistas disponibles se marca en rojo y no debe dejar tomar el horarios
 
 utilizamos useState para crear las variales y sus futuros updates, lo más complejo de todo el desafío fue calcular la fecha futura para realizar el temporizador.
 
